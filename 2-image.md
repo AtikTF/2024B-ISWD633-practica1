@@ -1,10 +1,11 @@
 # Imagen
 Es un archivo único que contiene todos los programas, librerías, dependencias y configuraciones necesarias para instalar y/o ejecutar una aplicación o un conjunto de aplicaciones.
+
 ![Imagen](img/imagen.PNG)
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+La imagen es una plantilla que define el entorno y la aplicación. El contenedor es una instancia en ejecución de una imagen, cuando Docker ejecuta una imagen, crea un contenedor basado en esa imagen, es decir, el contenedor es el entorno activo y aislado donde se ejecuta la aplicación.
 
 ![Imagen y contenedores](img/imagenContenedores.JPG)
 ## Comandos para imágenes
@@ -24,14 +25,18 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+```
+docker pull hello-world
+```
 
-**¿Qué es nginx**
-# COMPLETAR 
+**¿Qué es nginx?**
+
+Nginx es un servidor web de alto rendimiento. Fue creado con el objetivo de manejar un alto número de conexiones concurrentes y mejorar el rendimiento de las aplicaciones web, especialmente en entornos donde se necesitan grandes volúmenes de tráfico. 
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
-
+```
+docker pull nginx:alpine
+```
 ### Listar imágenes
 
 ```
@@ -53,10 +58,13 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+```
+docker inspect hello-world
+```
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+
+Algoritmo: sha256
 
 ### Filtrar imágenes
 
@@ -73,7 +81,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+```
+docker rmi hello-world
+````
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
